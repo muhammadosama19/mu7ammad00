@@ -7,12 +7,12 @@ export default function sratic() {
         <section className={styles.sratic}>
             <div className={styles.h}>
                 <div className={styles.nab}>
-                    <Image
+{/*                     <Image
                         src={Avatar}
                         width={240}
                         height={350}
                         alt="Picture of the author"
-                        />
+                        /> */}
                 </div>
             </div>
             <div className={styles.y}>
