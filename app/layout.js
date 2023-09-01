@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Script from "next/script";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +12,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+            <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-6YD5V5X4M7`}
+      />
+
+      <Script strategy="lazyOnload" id='my-script'>
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-6YD5V5X4M7', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
+
+        {children}
+      </body>
     </html>
   )
 }
