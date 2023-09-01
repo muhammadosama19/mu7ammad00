@@ -18,7 +18,7 @@ export default function sratic() {
             <div className={styles.y}>
                 {/* <h1>!Hi There</h1> */}
                 <h3>mu7ammad osama</h3>
-                <p>Designer & Programming</p>
+                <p>Backend</p>
             </div>
         </section>
     )
